@@ -35,27 +35,39 @@
     font-weight: 200;
 }
 
+.card .h1 {
+  font-size: 4em;
+}
+
+.blogwidevideo {
+      position:relative;
+      height: 315px;
+}
+
+.blogwidevideo iframe {
+top:0;
+position:absolute;
+left: 50%;
+transform: translate(-50%, 0);
+}
+
     </style>
 
 <script type="text/javascript">//<![CDATA[
 
     window.onload=function(){
-      
-// find elements
-var banner = $("#banner-message")
-var button = $("button")
-
-
 
 textRandomColor=function() {
-return randomColor({
-   luminosity: 'dark',});
-   }
+  return randomColor({
+    luminosity: 'dark',}
+  );
+}
 
 backRandomColor=function() {
-return randomColor({
-   luminosity: 'light',});
-   }
+  return randomColor({
+    luminosity: 'light',}
+  );
+}
 
 $('#card div').each(function(){
   $(this).css("color", textRandomColor())
@@ -71,22 +83,24 @@ $("#card").on('flip:done',function(){
 hid = $("div", this).filter(function() {
     return $(this).css('z-index') == 0;
   });
-  
+
   hid.css("color", textRandomColor());
   hid.css("background-color", backRandomColor());
-//   zind1 = $("div", this).filter(function() {
-//    return $(this).css('z-index') == 0;
-//  }).attr("class");
-//  console.log(zind1 + " is hidden");
 });
 
-// handle click and add class
 $("#card").on("click", function(){
- // banner.addClass("alt")
-  /// $("#card").flip();
   $("#card").flip('toggle');
-})
+});
 
+console.log("\n");
+console.log("%cЯ календарь", "font-family:Whitney,Helvetica,Arial,sans-serif;font-size:50px;font-weight:bold;text-transform:uppercase;color:#ffa834;-webkit-text-stroke:2px #26b;")
+console.log("%cПереверну", "font-family:Whitney,Helvetica,Arial,sans-serif;font-size:50px;font-weight:bold;text-transform:uppercase;color:#ffa834;-webkit-text-stroke:2px #26b;")
+console.log("%cИ снова третье", "font-family:Whitney,Helvetica,Arial,sans-serif;font-size:50px;font-weight:bold;text-transform:uppercase;color:#ffa834;-webkit-text-stroke:2px #26b;")
+console.log("%cСЕНТЯБРЯ", "font-family:Whitney,Helvetica,Arial,sans-serif;font-size:50px;font-weight:bold;text-transform:uppercase;color:#ffa834;-webkit-text-stroke:2px #26b;")
+
+console.log("\n");
+console.log("\n");
+console.log("\n");
 
     }
 
@@ -97,6 +111,15 @@ $("#card").on("click", function(){
   </head>
   <body>
 
+
+    <div class="widevideo">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/C-5t1DLMYV8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div style="text-align: center">
+      ↓↓↓ Переверни календарь, ведь опять пришло третье сентября...  ↓↓↓
+    </div>
+
 <div id="card" class="card" style="padding: 0">
   <div class="front">
     <h2>Сентябрь</h2>
@@ -106,7 +129,7 @@ $("#card").on("click", function(){
   <div class="back">
   <h2>&nbsp;</h2>
   <h1>03</h1>
-  <h2>Сентябрь</h2>
+  <h2>Сентябрь 2019</h2>
   </div>
 </div>
 
